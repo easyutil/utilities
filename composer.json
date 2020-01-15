@@ -5,7 +5,7 @@
     "require": {
         "php": "^5.6",
         "nesbot/carbon": "^1.26.3",
-        "Illuminate/Support": "5.8.35"
+        "illuminate/support": "5.8.35"
     },
     "license": "MIT",
     "authors": [
