@@ -3,15 +3,15 @@
     "description": "data processing, manipulation and conversion",
     "type": "library",
     "require": {
-        "php": "^5.6",
-        "nesbot/carbon": "^1.26.3",
-        "illuminate/support": "5.8.35"
+        "php": ">=5.6",
+        "nesbot/carbon": ">=1.26.3",
+        "illuminate/support": ">=5.8.35"
     },
     "license": "MIT",
     "authors": [
         {
             "name": "Vitor Piaia",
-            "email": "vitor.piaia@hotmail.com"
+            "email": "vitor.piaia95@gmail.com"
         }
     ],
     "minimum-stability": "dev",
