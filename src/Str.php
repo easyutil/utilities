@@ -107,4 +107,14 @@ class Str extends LaravelString
 
         return preg_replace($pattern, '', $fileName);
     }
+
+    /**
+     * Formata a string para letra minuscula
+     * @param string $string
+     * @return string
+     */
+    public static function toLower(string $string)
+    {
+        return strtolower($string);
+    }
 }

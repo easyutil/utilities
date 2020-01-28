@@ -7,13 +7,15 @@ class Money
     /**
      * Retorno a string numérica formatada para valor com decimais com ponto para o banco de dados.
      * @param $value
-     * @return mixed
+     * @param int $decimals
+     * @return string|string[]
      */
-    public static function formatToDatabase($value)
+    public static function formatToDatabase($value, $decimals = 2)
     {
         $value = str_replace("R$ ", '', $value);
         $value = str_replace(".", "", $value);
         $value = str_replace(",", ".", $value);
+        $value = number_format($value, $decimals);
         return $value;
     }
 
