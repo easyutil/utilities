@@ -47,4 +47,17 @@ class Number
         $value = number_format($value, 0, ".", ".");
         return $value;
     }
+
+    /**
+     * Formata o valor com duas casas decimais sem ponto nem virgula
+     * @param $value
+     * @param int $decimals
+     * @return string|string[]
+     */
+    public static function formatToInteger($value, $decimals = 2)
+    {
+        $value = number_format($value, $decimals);
+        $value = str_replace(".", "", $value);
+        return $value;
+    }
 }

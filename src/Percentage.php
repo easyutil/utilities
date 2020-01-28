@@ -10,12 +10,11 @@ class Percentage
      * @param int $decimals
      * @return string|string[]
      */
-    public static function formatToDatabase($value, $decimals = 2)
+    public static function formatToDatabase($value)
     {
         $value = str_replace("%", '', $value);
         $value = str_replace(".", "", $value);
         $value = str_replace(",", ".", $value);
-        $value = number_format($value, $decimals);
         return $value;
     }
 
