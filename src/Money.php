@@ -53,12 +53,13 @@ class Money
     /**
      * Conversão de um valor para centavos
      * @param float $value
+     * @param int $decimals
      * @return int
      */
-    public static function toCents(float $value) : int
+    public static function toCents(float $value, $decimals = 2)
     {
         $integer = (int)$value;
-        $cents = (float)bcsub($value, $integer) * 100;
+        $cents = (float)bcsub($value, $integer, $decimals) * 100;
         return (int)bcadd(bcmul($integer, 100), $cents);
     }
 }
