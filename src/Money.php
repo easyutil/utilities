@@ -42,7 +42,7 @@ class Money
     public static function valid($value) : bool
     {
         $value = (string) $value;
-        $role = "/^[0-9]{1,3}([.]([0-9]{3}))*[,]([.]{0})[0-9]{0,2}$/";
+        $role = "/^([0-9])*[.]([.]{0})[0-9]{0,2}$/";
 
         if(preg_match($role, $value) || is_numeric($value)){
             return true;
