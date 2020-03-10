@@ -58,7 +58,7 @@ class Money
      */
     public static function toCents(float $value, $decimals = 2) : int
     {
-        $value = number_format($value, $decimals);
+        $value = number_format($value, $decimals,'.', '');
         $integer = (int)$value;
         $cents = (float)bcsub($value, $integer, $decimals) * 100;
         return (int)bcadd(bcmul($integer, 100), $cents);
